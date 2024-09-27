@@ -49,5 +49,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Adapters\Bots\" />
+    <Folder Include="Adapters\Parsers\" />
+    <Folder Include="Application\UseCases\" />
+    <Folder Include="Core\Entities\" />
+    <Folder Include="Core\Interfaces\" />
+    <Folder Include="Infrastructure\Configuration\" />
+    <Folder Include="Infrastructure\IO\" />
+    <Folder Include="UI\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
