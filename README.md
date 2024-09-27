@@ -17,7 +17,6 @@ This C# console application simulates a **real-time weather monitoring and repor
 
 ## Project Structure
 
-/WeatherMonitoringApp │ ├── /Core │ ├── Entities │ └── Interfaces │ ├── /Application │ └── UseCases │ ├── /Adapters │ ├── Bots │ └── Parsers │ ├── /Infrastructure │ └── IO │ └── /UI └── Program.cs
 
 
 - **Core**: Contains entities like `WeatherData` and interfaces such as `IWeatherBot`.
