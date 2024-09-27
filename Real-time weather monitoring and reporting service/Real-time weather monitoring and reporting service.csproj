@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,20 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\Bots\RainBot.cs" />
+    <Compile Include="Adapters\Bots\SnowBot.cs" />
+    <Compile Include="Adapters\Bots\SunBot.cs" />
+    <Compile Include="Adapters\Parsers\JsonWeatherParser.cs" />
+    <Compile Include="Adapters\Parsers\XmlWeatherParser.cs" />
+    <Compile Include="Application\UseCases\WeatherMonitoringService.cs" />
+    <Compile Include="Core\Entities\WeatherData.cs" />
+    <Compile Include="Core\Interfaces\IWeatherBot.cs" />
+    <Compile Include="Core\Interfaces\IWeatherParser.cs" />
+    <Compile Include="Infrastructure\Configuration\BotConfig.cs" />
+    <Compile Include="Infrastructure\IO\ConfigurationReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Adapters\Bots\" />
-    <Folder Include="Adapters\Parsers\" />
-    <Folder Include="Application\UseCases\" />
-    <Folder Include="Core\Entities\" />
-    <Folder Include="Core\Interfaces\" />
-    <Folder Include="Infrastructure\Configuration\" />
-    <Folder Include="Infrastructure\IO\" />
     <Folder Include="UI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
